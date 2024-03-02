@@ -201,373 +201,497 @@
                                                 <div class="text-meta-small">IN</div>
                                             </a>
                                         </div>
-                                        <div data-w-id="9f610c21-b7d9-9af4-fb08-b3c3860d4005" class="mobile-menu-toggle">
-                                            <div class="mobile-menu-toggle-line _01" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                            </div>
-                                            <div class="mobile-menu-toggle-line _02" style="width: 100%;">
-                                            </div>
-                                            <div class="mobile-menu-toggle-line _03" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                            </div>
+                                        <style>
+                                            /* Mobile menu styling */
+                                            .mobile-menu {
+                                                display: none;
+                                                /* Initially hide the mobile menu */
+                                                background-color: black;
+                                                /* Set background color to black */
+                                                color: white;
+                                                /* Set text color to white */
+                                                padding: 10px;
+                                                /* Add padding for better appearance */
+                                                position: absolute;
+                                                /* Position the menu absolutely */
+                                                top: 50px;
+                                                /* Adjust the distance from the top */
+                                                left: 0;
+                                                /* Align the menu to the left */
+                                                width: 100%;
+                                                /* Make the menu full-width */
+                                                text-align: center;
+                                                /* Center-align the menu items */
+                                                transition: height 0.3s ease;
+                                                /* Add transition for smooth animation */
+                                            }
+
+                                            /* Style for the mobile menu toggle button */
+                                            .mobile-menu-toggle {
+                                                cursor: pointer;
+                                                /* Change cursor to pointer */
+                                                background: none;
+                                                /* Remove background */
+                                                border: none;
+                                                /* Remove border */
+                                                outline: none;
+                                                /* Remove outline */
+                                                position: fixed;
+                                                /* Position the button fixed */
+                                                top: 20px;
+                                                /* Adjust the distance from the top */
+                                                right: 20px;
+                                                /* Align the button to the right */
+                                                z-index: 999;
+                                                /* Set a high z-index to ensure it's above other elements */
+                                                transition: transform 0.3s ease;
+                                                /* Add transition for smooth animation */
+                                            }
+
+                                            /* Style for the toggle icon lines */
+                                            .toggle-line {
+                                                width: 25px;
+                                                height: 3px;
+                                                background-color: white;
+                                                margin: 5px 0;
+                                                transition: transform 0.3s ease;
+                                                /* Add transition for smooth animation */
+                                            }
+
+                                            /* Style for the toggle icon when active (clicked) */
+                                            .active .toggle-line:nth-child(1) {
+                                                transform: translateY(8px) rotate(45deg);
+                                            }
+
+                                            .active .toggle-line:nth-child(2) {
+                                                opacity: 0;
+                                            }
+
+                                            .active .toggle-line:nth-child(3) {
+                                                transform: translateY(-8px) rotate(-45deg);
+                                            }
+                                        </style>
+
+
+                                        <!-- Mobile menu toggle button -->
+                                        <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+                                            <div class="toggle-line"></div>
+                                            <div class="toggle-line"></div>
+                                            <div class="toggle-line"></div>
+                                        </button>
+
+                                        <!-- Mobile menu content -->
+                                        <div id="mobile-menu" class="mobile-menu">
+                                            <!-- List of menu items -->
+                                            <a id="contact" class="button primary w-inline-block" href="Home.html">
+                                                <div class="button-inner">
+                                                    <div class="button-inner-text">Home</div>
+                                                    <div class="button-inner-text-hover">Home</div>
+                                                </div>
+                                            </a><br><a id="contact" class="button primary w-inline-block" href="careers1.html">
+                                                <div class="button-inner">
+                                                    <div class="button-inner-text">Careers</div>
+                                                    <div class="button-inner-text-hover">Careers</div>
+                                                </div>
+                                            </a><br><a id="contact" class="button primary w-inline-block" href="Products.html">
+                                                <div class="button-inner">
+                                                    <div class="button-inner-text">Products</div>
+                                                    <div class="button-inner-text-hover">Products</div>
+                                                </div>
+                                            </a><br><a id="contact" class="button primary w-inline-block" href="contact.html">
+                                                <div class="button-inner">
+                                                    <div class="button-inner-text">Contact</div>
+                                                    <div class="button-inner-text-hover">Contact</div>
+                                                </div>
+                                            </a><br> <a target="_blank" class="badge small link w-inline-block" href="https://www.linkedin.com/company/huxangroup">
+                                                <div class="text-meta-small">IN</div>
+                                            </a>
+
+                                        </div>
+
+                                        <script>
+                                            // JavaScript to toggle mobile menu visibility
+                                                                                            document.addEventListener("DOMContentLoaded", function() {
+                                                                                                var mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+                                                                                                var mobileMenu = document.getElementById("mobile-menu");
+                                                                                        
+                                                                                                // Toggle mobile menu visibility on click
+                                                                                                mobileMenuToggle.addEventListener("click", function() {
+                                                                                                    mobileMenu.classList.toggle("active");
+                                                                                                    if (mobileMenu.classList.contains("active")) {
+                                                                                                        mobileMenu.style.display = "block";
+                                                                                                    } else {
+                                                                                                        mobileMenu.style.display = "none";
+                                                                                                    }
+                                                                                                });
+                                                                                            });
+                                        </script>
+                                        <div class="mobile-menu-toggle-line _01" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                                        </div>
+                                        <div class="mobile-menu-toggle-line _02" style="width: 100%;">
+                                        </div>
+                                        <div class="mobile-menu-toggle-line _03" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
                                         </div>
                                     </div>
                                 </div>
-                            </header>
-                            <div class="line" style="width: 0%;">
+                        </div>
+        </header>
+        <div class="line" style="width: 0%;">
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="mobile-menu" style="display: none; opacity: 0; transform: translate3d(0px, 10px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+        <div class="page-padding">
+        </div>
+    </div>
+    </header>
+    <main class="main-wrapper"> <img src="images/image.jpg" alt="Responsive Image" style="width: 100%;">
+        <section class="section-home-hero">
+            <div class="page-padding">
+                <div class="container-xxlarge">
+                </div>
+            </div>
+        </section>
+        <section class="section-home-services">
+            <div class="page-padding">
+
+
+
+                <div class="container-xxlarge">
+                    <div class="line" style="width: 100%; height: 1px;"></div>
+                    <h1>Our Expertise</h1>
+                    <div class="padding-vertical padding-xlarge">
+                        <div class="home-services-grid">
+                            <div class="line-vertical hide-mobile-landscape" style="height: 100%; width: 1.6px;"></div>
+                            <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed0487-7ac29984" class="home-services-grid-right">
+                                <div class="home-services-grid-right-row">
+                                    <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed0489-7ac29984" class="home-services-item">
+                                        <img src="images/647b3682159f326b03599a95_icon-01.svg" loading="lazy" alt="Client Logo" class="image-5">
+                                        <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed048b-7ac29984">
+                                            <div class="margin-bottom margin-xsmall">
+                                                <h3 class="text-uppercase">Luxury Venture</h3>
+                                            </div>
+                                            <div class="text-block-35">Pioneer in luxury ventures, offering innovative solutions that redefine the standards of excellence in the industry.</div>
+                                        </div>
+                                    </div>
+                                    <div class="line-vertical hide-tablet" style="height: 100%; width: 100px;"></div>
+                                    <div class="line show-tablet" style="width: 100%; height: 1px;"></div>
+                                    <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed0492-7ac29984" class="home-services-item">
+                                        <img src="images/647b3682159f326b03599a99_icon-02.svg" loading="lazy" alt="" class="image-6">
+                                        <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed0494-7ac29984">
+                                            <div class="margin-bottom margin-xsmall">
+                                                <h3 class="text-uppercase">Consulting</h3>
+                                            </div>
+                                            <div class="text-block-36">Offer expert advice, strategic planning, and practical solutions to guide businesses toward success and growth.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="line" style="width: 100%; height: 1px;"></div>
+                                <div class="home-services-grid-right-row">
+                                    <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed049c-7ac29984" class="home-services-item">
+                                        <img src="images/647b3682159f326b03599a98_icon-03.svg" loading="lazy" alt="" class="image-7">
+                                        <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed049e-7ac29984" class="div-block-20">
+                                            <div class="margin-bottom margin-xsmall">
+                                                <h3 class="text-uppercase">Growth</h3>
+                                            </div>
+                                            <div class="text-block-44">Drive business growth, expand market presence, and increase market share through strategic and innovative approaches.</div>
+                                        </div>
+                                    </div>
+                                    <div class="line-vertical hide-tablet" style="height: 100%; width: 100px;"></div>
+                                    <div class="line show-tablet" style="width: 100%; height: 1px;"></div>
+                                    <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed04a5-7ac29984" class="home-services-item">
+                                        <img src="images/647b3682159f326b03599a9b_icon-04.svg" loading="lazy" alt="" class="image-8">
+                                        <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed04a7-7ac29984">
+                                            <div class="margin-bottom margin-xsmall">
+                                                <h3 class="text-uppercase">Healthcare</h3>
+                                            </div>
+                                            <div class="text-block-37">Provide comprehensive financial and strategic solutions in the healthcare sector, covering various aspects of the industry.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="line" style="width: 100%; height: 1px;"></div>
+                                <div class="home-services-grid-right-row">
+                                    <!-- Additional rows for Design, and Finance remain unchanged -->
+                                    <div id="w-node-_0c06a234-153f-7839-fe18-1545bee7f7d7-7ac29984" class="home-services-item">
+                                        <img src="images/647b3682159f326b03599a9a_icon-07.svg" loading="lazy" alt="" class="image-10">
+                                        <div id="w-node-_0c06a234-153f-7839-fe18-1545bee7f7d9-7ac29984">
+                                            <div class="margin-bottom margin-xsmall">
+                                                <h3 class="text-uppercase">Design</h3>
+                                            </div>
+                                            <div class="text-block-38">Craft unique brand identities and develop design experiences that resonate with businesses and their target audiences.</div>
+                                        </div>
+                                    </div>
+                                    <div class="line-vertical hide-tablet" style="height: 100%; width: 100px;"></div>
+                                    <div id="w-node-_0c06a234-153f-7839-fe18-1545bee7f7cd-7ac29984" class="home-services-item">
+                                        <img src="images/647b3682159f326b03599a9c_icon-06.svg" loading="lazy" alt="" class="image-9">
+                                        <div id="w-node-_0c06a234-153f-7839-fe18-1545bee7f7cf-7ac29984">
+                                            <div class="margin-bottom margin-xsmall">
+                                                <h3 class="text-uppercase">Finance</h3>
+                                            </div>
+                                            <div class="text-block-39">Offer a range of financial services, including accounting, auditing, tax planning, financial reporting, and outsourced CFO services.</div>
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="line show-tablet" style="width: 0%;">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="mobile-menu" style="display: none; opacity: 0; transform: translate3d(0px, 10px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                <div class="page-padding">
+                <div class="line" style="width: 0%;">
                 </div>
             </div>
-        </header>
-        <main class="main-wrapper"> <img src="images/image.jpg" alt="Responsive Image" style="width: 100%;">
-            <section class="section-home-hero">
-                <div class="page-padding">
-                    <div class="container-xxlarge">
-                    </div>
-                </div>
-            </section>
-            <section class="section-home-services">
-                <div class="page-padding">
-
-
-
-                    <div class="container-xxlarge">
-                        <div class="line" style="width: 100%; height: 1px;"></div>
-                        <h1>Our Expertise</h1>
-                        <div class="padding-vertical padding-xlarge">
-                            <div class="home-services-grid">
-                                <div class="line-vertical hide-mobile-landscape" style="height: 100%; width: 1.6px;"></div>
-                                <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed0487-7ac29984" class="home-services-grid-right">
-                                    <div class="home-services-grid-right-row">
-                                        <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed0489-7ac29984" class="home-services-item">
-                                            <img src="images/647b3682159f326b03599a95_icon-01.svg" loading="lazy" alt="Client Logo" class="image-5">
-                                            <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed048b-7ac29984">
-                                                <div class="margin-bottom margin-xsmall">
-                                                    <h3 class="text-uppercase">Luxury Venture</h3>
-                                                </div>
-                                                <div class="text-block-35">Pioneer in luxury ventures, offering innovative solutions that redefine the standards of excellence in the industry.</div>
-                                            </div>
-                                        </div>
-                                        <div class="line-vertical hide-tablet" style="height: 100%; width: 100px;"></div>
-                                        <div class="line show-tablet" style="width: 100%; height: 1px;"></div>
-                                        <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed0492-7ac29984" class="home-services-item">
-                                            <img src="images/647b3682159f326b03599a99_icon-02.svg" loading="lazy" alt="" class="image-6">
-                                            <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed0494-7ac29984">
-                                                <div class="margin-bottom margin-xsmall">
-                                                    <h3 class="text-uppercase">Consulting</h3>
-                                                </div>
-                                                <div class="text-block-36">Offer expert advice, strategic planning, and practical solutions to guide businesses toward success and growth.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="line" style="width: 100%; height: 1px;"></div>
-                                    <div class="home-services-grid-right-row">
-                                        <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed049c-7ac29984" class="home-services-item">
-                                            <img src="images/647b3682159f326b03599a98_icon-03.svg" loading="lazy" alt="" class="image-7">
-                                            <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed049e-7ac29984" class="div-block-20">
-                                                <div class="margin-bottom margin-xsmall">
-                                                    <h3 class="text-uppercase">Growth</h3>
-                                                </div>
-                                                <div class="text-block-44">Drive business growth, expand market presence, and increase market share through strategic and innovative approaches.</div>
-                                            </div>
-                                        </div>
-                                        <div class="line-vertical hide-tablet" style="height: 100%; width: 100px;"></div>
-                                        <div class="line show-tablet" style="width: 100%; height: 1px;"></div>
-                                        <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed04a5-7ac29984" class="home-services-item">
-                                            <img src="images/647b3682159f326b03599a9b_icon-04.svg" loading="lazy" alt="" class="image-8">
-                                            <div id="w-node-_2dfe6218-ab48-4955-2415-db0757ed04a7-7ac29984">
-                                                <div class="margin-bottom margin-xsmall">
-                                                    <h3 class="text-uppercase">Healthcare</h3>
-                                                </div>
-                                                <div class="text-block-37">Provide comprehensive financial and strategic solutions in the healthcare sector, covering various aspects of the industry.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="line" style="width: 100%; height: 1px;"></div>
-                                    <div class="home-services-grid-right-row">
-                                        <!-- Additional rows for Design, and Finance remain unchanged -->
-                                        <div id="w-node-_0c06a234-153f-7839-fe18-1545bee7f7d7-7ac29984" class="home-services-item">
-                                            <img src="images/647b3682159f326b03599a9a_icon-07.svg" loading="lazy" alt="" class="image-10">
-                                            <div id="w-node-_0c06a234-153f-7839-fe18-1545bee7f7d9-7ac29984">
-                                                <div class="margin-bottom margin-xsmall">
-                                                    <h3 class="text-uppercase">Design</h3>
-                                                </div>
-                                                <div class="text-block-38">Craft unique brand identities and develop design experiences that resonate with businesses and their target audiences.</div>
-                                            </div>
-                                        </div>
-                                        <div class="line-vertical hide-tablet" style="height: 100%; width: 100px;"></div>
-                                        <div id="w-node-_0c06a234-153f-7839-fe18-1545bee7f7cd-7ac29984" class="home-services-item">
-                                            <img src="images/647b3682159f326b03599a9c_icon-06.svg" loading="lazy" alt="" class="image-9">
-                                            <div id="w-node-_0c06a234-153f-7839-fe18-1545bee7f7cf-7ac29984">
-                                                <div class="margin-bottom margin-xsmall">
-                                                    <h3 class="text-uppercase">Finance</h3>
-                                                </div>
-                                                <div class="text-block-39">Offer a range of financial services, including accounting, auditing, tax planning, financial reporting, and outsourced CFO services.</div>
-
-
-
-                                            </div>
-                                        </div>
-                                        <div class="line show-tablet" style="width: 0%;">
-                                        </div>
+        </section>
+        <section class="section-home-projects">
+            <div class="page-padding">
+                <div class="padding-vertical padding-xlarge">
+                    <div class="home-how-grid _1">
+                        <div class="home-how-grid-left">
+                            <div class="margin-bottom margin-xxhuge">
+                                <div class="margin-bottom margin-xsmall">
+                                    <div class="text-meta">How we work</div>
+                                </div>
+                                <div class="margin-bottom margin-xsmall">
+                                    <div class="max-width-xlarge">
+                                        <h2 class="heading-14">We can help you invent, <br>or reinvent your business.</h2>
                                     </div>
                                 </div>
                             </div>
+                            <img src="images/647b3682159f326b03599a9b_icon-04.svg" loading="lazy" width="100" alt="" class="image-icon" style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 0;">
+                        </div>
+                        <div class="line-vertical hide-tablet" style="height: 100%; width: 100px;">
+                        </div>
+                        <div class="line show-tablet" style="width: 0%;">
+                        </div>
+                        <div id="w-node-_9a0de88d-00ad-ed70-6484-509d15d34801-7ac29984" class="home-how-grid-right">
+                            <div class="margin-bottom margin-xlarge">
+                                <div class="text-size-xlarge">Through our expertise, network and industry insights, we help you navigate change and turn challenges into opportunities.</div>
+                            </div>
+                            <div class="div-block-12">
+                                <a id="contact" class="button primary w-inline-block">
+                                    <div class="button-inner">
+                                        <div class="button-inner-text" style="">Our Services</div>
+                                        <div class="button-inner-text-hover" style="">Our Services</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line" style="width: 0%;">
+                </div>
+                <div class="container-xxlarge">
+                    <div class="padding-vertical padding-xlarge">
+                        <div class="home-projects-grid">
+                            <div id="w-node-_951f350f-01e3-5439-3d17-b14f5938021f-7ac29984" class="div-block">
+                                <div class="home-projects-grid-left-inner">
+                                    <div class="margin-bottom margin-xsmall">
+                                        <div class="max-width-small">
+                                            <h2 class="heading-h1 text-uppercase">OUR<br>projects</h2>
+                                        </div>
+                                    </div>
+                                    <div class="margin-bottom margin-large">
+                                        <div class="max-width-small">
+                                            <div class="text-size-large">We've meticulously grown our enterprise into a holistic ecosystem of robust entities.</div>
+                                        </div>
+                                    </div>
+                                    <a id="contact" class="button primary w-inline-block">
+                                        <div class="button-inner">
+                                            <div class="button-inner-text" style="">how we can help</div>
+                                            <div class="button-inner-text-hover" style="">how we can help</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="line-vertical hide-mobile-landscape" style="height: 0%;">
+                            </div>
+                            <div id="w-node-_951f350f-01e3-5439-3d17-b14f5938022a-7ac29984" class="home-projects-grid-right">
+                                <a target="_blank" class="w-inline-block">
+                                    <div>
+                                        <img src="images/logo2.png">
+                                        <div class="text-block-15">Abundico</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="w-inline-block">
+                                    <div>
+                                        <img src="images/logo2.png">
+                                        <div class="text-block-15">Luxury Fashion &amp;&nbsp; Shows</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="w-inline-block">
+                                    <div>
+                                        <img src="images/logo2.png">
+                                        <div class="text-block-15">Luxury Interior Design &amp;&nbsp; Real-Estate</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="w-node-a2582b48-b423-802f-cead-aa0d096ea5de-7ac29984" class="home-projects-grid-right">
+                                <a target="_blank" class="w-inline-block">
+                                    <div>
+                                        <img src="images/logo2.png">
+                                        <div class="text-block-15">Fintech</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="w-inline-block">
+                                    <div class="div-block-28">
+                                        <img src="images/logo2.png">
+                                        <div class="text-block-15">Healthcare Consulting and Luxury Supplements</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="w-inline-block">
+                                    <div class="div-block-28">
+                                        <img src="images/logo2.png">
+                                        <div class="text-block-15">Intelligent ERP &amp;&nbsp; IS Suite</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line" style="width: 100%; height: 1px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section-home-values">
+            <div class="page-padding">
+                <div class="container-xxlarge">
+                    <div class="line" style="width: 0%;">
+                    </div>
+                    <div class="padding-vertical padding-large">
+                        <div class="text-align-center">
+                            <h2 class="heading-small text-uppercase">Our VISION, MISSION &amp; &nbsp;VALUES</h2>
                         </div>
                     </div>
                     <div class="line" style="width: 0%;">
                     </div>
-                </div>
-            </section>
-            <section class="section-home-projects">
-                <div class="page-padding">
                     <div class="padding-vertical padding-xlarge">
-                        <div class="home-how-grid _1">
-                            <div class="home-how-grid-left">
+                        <div class="home-values-grid">
+                            <div class="image-wrapper">
+                                <img src="images/64c003577edbb73a777457c6_jiwjdwef-min.png" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 767px) 87vw, (max-width: 991px) 88vw, (max-width: 1439px) 41vw, 43vw" srcset="images/64c003577edbb73a777457c6_jiwjdwef-min-p-500.png 500w, images/64c003577edbb73a777457c6_jiwjdwef-min-p-800.png 800w, images/64c003577edbb73a777457c6_jiwjdwef-min-p-1080.png 1080w, images/64c003577edbb73a777457c6_jiwjdwef-min-p-1600.png 1600w, images/64c003577edbb73a777457c6_jiwjdwef-min-p-2000.png 2000w, images/64c003577edbb73a777457c6_jiwjdwef-min.png 2442w" alt="" class="image-27">
+                            </div>
+                            <div class="line-vertical hide-tablet" style="height: 100%; width: 100px;">
+                            </div>
+                            <div id="w-node-afed07bc-83f3-db0a-2dee-a7bd0e4526e4-7ac29984" class="home-values-grid-right">
+                                <div class="home-values-item">
+                                    <div class="badge">
+                                        <div class="text-block-45">01</div>
+                                    </div>
+                                    <div id="w-node-afed07bc-83f3-db0a-2dee-a7bd0e4526e9-7ac29984">
+                                        <div class="margin-bottom margin-xsmall">
+                                            <h3 class="text-uppercase">VISION</h3>
+                                        </div>
+                                        <div class="text-block-40">We are a dynamic force in driving business evolution and growth. By building and nurturing enduring relationships, we strive to foster a sustainable business ecosystem where each one of our ventures thrives.</div>
+                                    </div>
+                                </div>
+                                <div class="line" style="width: 0%;">
+                                </div>
+                                <div class="home-values-item">
+                                    <div class="badge">
+                                        <div class="text-block-46">02</div>
+                                    </div>
+                                    <div id="w-node-afed07bc-83f3-db0a-2dee-a7bd0e4526f4-7ac29984">
+                                        <div class="margin-bottom margin-xsmall">
+                                            <h3 class="text-uppercase">MISSION</h3>
+                                        </div>
+                                        <div class="text-block-48">We build, invest, and advise, drawing on our vast network and diverse industry experience. Above all, we value trust, collaboration, and excellence in our endeavours. </div>
+                                    </div>
+                                </div>
+                                <div class="line" style="width: 0%;">
+                                </div>
+                                <div id="w-node-afed07bc-83f3-db0a-2dee-a7bd0e4526fb-7ac29984" class="home-values-item">
+                                    <div class="badge">
+                                        <div class="text-block-47">03</div>
+                                    </div>
+                                    <div id="w-node-afed07bc-83f3-db0a-2dee-a7bd0e4526ff-7ac29984" class="div-block-13">
+                                        <div class="margin-bottom margin-xsmall">
+                                            <h3 class="text-uppercase">VALUES</h3>
+                                        </div>
+                                        <div class="text-block-49">We uphold the highest level of integrity by putting our partners' interests first, maintaining confidentiality, and practicing ethical standards. Our commitment to innovation pushes us to embrace fresh ideas and challenge conventional thinking. </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-cta-contact">
+            <div class="page-padding">
+                <div class="container-xxlarge">
+                    <div class="line" style="width: 0%;">
+                    </div>
+                    <div class="padding-vertical padding-xlarge">
+                        <div class="cta-contact-grid">
+                            <div class="cta-contact-grid-left">
                                 <div class="margin-bottom margin-xxhuge">
                                     <div class="margin-bottom margin-xsmall">
-                                        <div class="text-meta">How we work</div>
+                                        <div class="text-meta">Contact</div>
                                     </div>
                                     <div class="margin-bottom margin-xsmall">
                                         <div class="max-width-xlarge">
-                                            <h2 class="heading-14">We can help you invent, <br>or reinvent your business.</h2>
+                                            <h2 class="heading-8">EMPOWER YOUR COMPANY WITH US, <br>OR GET ADVICE TO ELEVATE YOUR INNOVATION STRATEGY.</h2>
                                         </div>
                                     </div>
                                 </div>
-                                <img src="images/647b3682159f326b03599a9b_icon-04.svg" loading="lazy" width="100" alt="" class="image-icon" style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 0;">
+                                <img src="images/647b3682159f326b03599a99_icon-02.svg" loading="lazy" width="100" alt="" class="image-icon" style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 0;">
                             </div>
                             <div class="line-vertical hide-tablet" style="height: 100%; width: 100px;">
                             </div>
                             <div class="line show-tablet" style="width: 0%;">
                             </div>
-                            <div id="w-node-_9a0de88d-00ad-ed70-6484-509d15d34801-7ac29984" class="home-how-grid-right">
+                            <div id="w-node-_418c0633-a469-694e-03ab-e4f9cbbce2fc-cbbce2eb" class="cta-contact-grid-right">
                                 <div class="margin-bottom margin-xlarge">
-                                    <div class="text-size-xlarge">Through our expertise, network and industry insights, we help you navigate change and turn challenges into opportunities.</div>
+                                    <div class="text-size-xlarge">Our collective of leading brands can support bringing your vision to life with speed and impact. Reach out to start a conversation about partnering for success.</div>
                                 </div>
-                                <div class="div-block-12">
-                                    <a id="contact" class="button primary w-inline-block">
-                                        <div class="button-inner">
-                                            <div class="button-inner-text" style="">Our Services</div>
-                                            <div class="button-inner-text-hover" style="">Our Services</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line" style="width: 0%;">
-                    </div>
-                    <div class="container-xxlarge">
-                        <div class="padding-vertical padding-xlarge">
-                            <div class="home-projects-grid">
-                                <div id="w-node-_951f350f-01e3-5439-3d17-b14f5938021f-7ac29984" class="div-block">
-                                    <div class="home-projects-grid-left-inner">
-                                        <div class="margin-bottom margin-xsmall">
-                                            <div class="max-width-small">
-                                                <h2 class="heading-h1 text-uppercase">OUR<br>projects</h2>
-                                            </div>
-                                        </div>
-                                        <div class="margin-bottom margin-large">
-                                            <div class="max-width-small">
-                                                <div class="text-size-large">We've meticulously grown our enterprise into a holistic ecosystem of robust entities.</div>
-                                            </div>
-                                        </div>
-                                        <a id="contact" class="button primary w-inline-block">
-                                            <div class="button-inner">
-                                                <div class="button-inner-text" style="">how we can help</div>
-                                                <div class="button-inner-text-hover" style="">how we can help</div>
-                                            </div>
-                                        </a>
+                                <a id="contact" class="button primary w-inline-block">
+                                    <div class="button-inner">
+                                        <div class="button-inner-text" style="">CONTACT US</div>
+                                        <div class="button-inner-text-hover" style="">CONTACT US</div>
                                     </div>
-                                </div>
-                                <div class="line-vertical hide-mobile-landscape" style="height: 0%;">
-                                </div>
-                                <div id="w-node-_951f350f-01e3-5439-3d17-b14f5938022a-7ac29984" class="home-projects-grid-right">
-                                    <a target="_blank" class="w-inline-block">
-                                        <div>
-                                            <img src="images/logo2.png">
-                                            <div class="text-block-15">Abundico</div>
-                                        </div>
-                                    </a>
-                                    <a target="_blank" class="w-inline-block">
-                                        <div>
-                                            <img src="images/logo2.png">
-                                            <div class="text-block-15">Luxury Fashion &amp;&nbsp; Shows</div>
-                                        </div>
-                                    </a>
-                                    <a target="_blank" class="w-inline-block">
-                                        <div>
-                                            <img src="images/logo2.png">
-                                            <div class="text-block-15">Luxury Interior Design &amp;&nbsp; Real-Estate</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div id="w-node-a2582b48-b423-802f-cead-aa0d096ea5de-7ac29984" class="home-projects-grid-right">
-                                    <a target="_blank" class="w-inline-block">
-                                        <div>
-                                            <img src="images/logo2.png">
-                                            <div class="text-block-15">Fintech</div>
-                                        </div>
-                                    </a>
-                                    <a target="_blank" class="w-inline-block">
-                                        <div class="div-block-28">
-                                            <img src="images/logo2.png">
-                                            <div class="text-block-15">Healthcare Consulting and Luxury Supplements</div>
-                                        </div>
-                                    </a>
-                                    <a target="_blank" class="w-inline-block">
-                                        <div class="div-block-28">
-                                            <img src="images/logo2.png">
-                                            <div class="text-block-15">Intelligent ERP &amp;&nbsp; IS Suite</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line" style="width: 100%; height: 1px;">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="section-home-values">
-                <div class="page-padding">
-                    <div class="container-xxlarge">
-                        <div class="line" style="width: 0%;">
-                        </div>
-                        <div class="padding-vertical padding-large">
-                            <div class="text-align-center">
-                                <h2 class="heading-small text-uppercase">Our VISION, MISSION &amp; &nbsp;VALUES</h2>
-                            </div>
-                        </div>
-                        <div class="line" style="width: 0%;">
-                        </div>
-                        <div class="padding-vertical padding-xlarge">
-                            <div class="home-values-grid">
-                                <div class="image-wrapper">
-                                    <img src="images/64c003577edbb73a777457c6_jiwjdwef-min.png" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 767px) 87vw, (max-width: 991px) 88vw, (max-width: 1439px) 41vw, 43vw" srcset="images/64c003577edbb73a777457c6_jiwjdwef-min-p-500.png 500w, images/64c003577edbb73a777457c6_jiwjdwef-min-p-800.png 800w, images/64c003577edbb73a777457c6_jiwjdwef-min-p-1080.png 1080w, images/64c003577edbb73a777457c6_jiwjdwef-min-p-1600.png 1600w, images/64c003577edbb73a777457c6_jiwjdwef-min-p-2000.png 2000w, images/64c003577edbb73a777457c6_jiwjdwef-min.png 2442w" alt="" class="image-27">
-                                </div>
-                                <div class="line-vertical hide-tablet" style="height: 100%; width: 100px;">
-                                </div>
-                                <div id="w-node-afed07bc-83f3-db0a-2dee-a7bd0e4526e4-7ac29984" class="home-values-grid-right">
-                                    <div class="home-values-item">
-                                        <div class="badge">
-                                            <div class="text-block-45">01</div>
-                                        </div>
-                                        <div id="w-node-afed07bc-83f3-db0a-2dee-a7bd0e4526e9-7ac29984">
-                                            <div class="margin-bottom margin-xsmall">
-                                                <h3 class="text-uppercase">VISION</h3>
-                                            </div>
-                                            <div class="text-block-40">We are a dynamic force in driving business evolution and growth. By building and nurturing enduring relationships, we strive to foster a sustainable business ecosystem where each one of our ventures thrives.</div>
-                                        </div>
-                                    </div>
-                                    <div class="line" style="width: 0%;">
-                                    </div>
-                                    <div class="home-values-item">
-                                        <div class="badge">
-                                            <div class="text-block-46">02</div>
-                                        </div>
-                                        <div id="w-node-afed07bc-83f3-db0a-2dee-a7bd0e4526f4-7ac29984">
-                                            <div class="margin-bottom margin-xsmall">
-                                                <h3 class="text-uppercase">MISSION</h3>
-                                            </div>
-                                            <div class="text-block-48">We build, invest, and advise, drawing on our vast network and diverse industry experience. Above all, we value trust, collaboration, and excellence in our endeavours. </div>
-                                        </div>
-                                    </div>
-                                    <div class="line" style="width: 0%;">
-                                    </div>
-                                    <div id="w-node-afed07bc-83f3-db0a-2dee-a7bd0e4526fb-7ac29984" class="home-values-item">
-                                        <div class="badge">
-                                            <div class="text-block-47">03</div>
-                                        </div>
-                                        <div id="w-node-afed07bc-83f3-db0a-2dee-a7bd0e4526ff-7ac29984" class="div-block-13">
-                                            <div class="margin-bottom margin-xsmall">
-                                                <h3 class="text-uppercase">VALUES</h3>
-                                            </div>
-                                            <div class="text-block-49">We uphold the highest level of integrity by putting our partners' interests first, maintaining confidentiality, and practicing ethical standards. Our commitment to innovation pushes us to embrace fresh ideas and challenge conventional thinking. </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-cta-contact">
-                <div class="page-padding">
-                    <div class="container-xxlarge">
-                        <div class="line" style="width: 0%;">
-                        </div>
-                        <div class="padding-vertical padding-xlarge">
-                            <div class="cta-contact-grid">
-                                <div class="cta-contact-grid-left">
-                                    <div class="margin-bottom margin-xxhuge">
-                                        <div class="margin-bottom margin-xsmall">
-                                            <div class="text-meta">Contact</div>
-                                        </div>
-                                        <div class="margin-bottom margin-xsmall">
-                                            <div class="max-width-xlarge">
-                                                <h2 class="heading-8">EMPOWER YOUR COMPANY WITH US, <br>OR GET ADVICE TO ELEVATE YOUR INNOVATION STRATEGY.</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img src="images/647b3682159f326b03599a99_icon-02.svg" loading="lazy" width="100" alt="" class="image-icon" style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 0;">
-                                </div>
-                                <div class="line-vertical hide-tablet" style="height: 100%; width: 100px;">
-                                </div>
-                                <div class="line show-tablet" style="width: 0%;">
-                                </div>
-                                <div id="w-node-_418c0633-a469-694e-03ab-e4f9cbbce2fc-cbbce2eb" class="cta-contact-grid-right">
-                                    <div class="margin-bottom margin-xlarge">
-                                        <div class="text-size-xlarge">Our collective of leading brands can support bringing your vision to life with speed and impact. Reach out to start a conversation about partnering for success.</div>
-                                    </div>
-                                    <a id="contact" class="button primary w-inline-block">
-                                        <div class="button-inner">
-                                            <div class="button-inner-text" style="">CONTACT US</div>
-                                            <div class="button-inner-text-hover" style="">CONTACT US</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <div class="footer">
-            <div class="page-padding">
-                <div class="container-xxlarge">
-                    <div class="line" style="width: 0%;">
-                    </div>
-                    <div class="line-copy-3">
-                    </div>
-                    <div class="footer-bottom">
-                        <div class="subnav center">
-                            <div class="text-meta">© &nbsp;HUXAN HOLDINGS GROUP<a target="_blank" class="text-style-link">
-                                </a>
-                                <a target="_blank" class="text-style-link">
                                 </a>
                             </div>
-                            <div class="text-meta-footer">- all rights reserved - <span class="year">2023</span>
-                            </div>
-                        </div>
-                        <div class="footer-bottom-nav">
-                            <a class="text-meta-link">Privacy</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="w-embed w-script">
-                <script>
-                    let yearElements = document.getElementsByClassName('year'); [].slice.call(yearElements).forEach(function (div) {   div.innerHTML = new Date().getFullYear(); });
-                </script>
+        </section>
+    </main>
+    <div class="footer">
+        <div class="page-padding">
+            <div class="container-xxlarge">
+                <div class="line" style="width: 0%;">
+                </div>
+                <div class="line-copy-3">
+                </div>
+                <div class="footer-bottom">
+                    <div class="subnav center">
+                        <div class="text-meta">© &nbsp;HUXAN HOLDINGS GROUP<a target="_blank" class="text-style-link">
+                            </a>
+                            <a target="_blank" class="text-style-link">
+                            </a>
+                        </div>
+                        <div class="text-meta-footer">- all rights reserved - <span class="year">2023</span>
+                        </div>
+                    </div>
+                    <div class="footer-bottom-nav">
+                        <a class="text-meta-link">Privacy</a>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="w-embed w-script">
+            <script>
+                let yearElements = document.getElementsByClassName('year'); [].slice.call(yearElements).forEach(function (div) {   div.innerHTML = new Date().getFullYear(); });
+            </script>
+        </div>
+    </div>
     </div>
     <script src="js/jquery-3.5.1.min.dc5e7f18c8.js" type="text/javascript" crossorigin="anonymous">
     </script>

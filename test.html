@@ -263,7 +263,6 @@
 
                             .heading-small,
                             .chakra-heading,
-                            .contentArea,
                             .chakra-text {
                                 color: white;
                                 /* Set the text color to white */
@@ -383,46 +382,27 @@
                                 transform: translateY(-8px) rotate(-45deg);
                             }
                         </style>
+                        </head>
 
+                        <body>
 
-                        <!-- Mobile menu toggle button -->
-                        <button id="mobile-menu-toggle" class="mobile-menu-toggle">
-                            <div class="toggle-line"></div>
-                            <div class="toggle-line"></div>
-                            <div class="toggle-line"></div>
-                        </button>
+                            <!-- Mobile menu toggle button -->
+                            <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+                                <div class="toggle-line"></div>
+                                <div class="toggle-line"></div>
+                                <div class="toggle-line"></div>
+                            </button>
 
-                        <!-- Mobile menu content -->
-                        <div id="mobile-menu" class="mobile-menu">
-                            <!-- List of menu items -->
-                            <a id="contact" class="button primary w-inline-block" href="about.html">
-                                <div class="button-inner">
-                                    <div class="button-inner-text">About</div>
-                                    <div class="button-inner-text-hover">About</div>
-                                </div>
-                            </a><br><a id="contact" class="button primary w-inline-block" href="careers1.html">
-                                <div class="button-inner">
-                                    <div class="button-inner-text">Careers</div>
-                                    <div class="button-inner-text-hover">Careers</div>
-                                </div>
-                            </a><br><a id="contact" class="button primary w-inline-block" href="Products.html">
-                                <div class="button-inner">
-                                    <div class="button-inner-text">Products</div>
-                                    <div class="button-inner-text-hover">Products</div>
-                                </div>
-                            </a><br><a id="contact" class="button primary w-inline-block" href="contact.html">
-                                <div class="button-inner">
-                                    <div class="button-inner-text">Contact</div>
-                                    <div class="button-inner-text-hover">Contact</div>
-                                </div>
-                            </a><br> <a target="_blank" class="badge small link w-inline-block" href="https://www.linkedin.com/company/huxangroup">
-                                <div class="text-meta-small">IN</div>
-                            </a>
+                            <!-- Mobile menu content -->
+                            <div id="mobile-menu" class="mobile-menu">
+                                <!-- List of menu items -->
+                                <a href="#">Option 1</a>
+                                <a href="#">Option 2</a>
+                                <a href="#">Option 3</a>
+                            </div>
 
-                        </div>
-
-                        <script>
-                            // JavaScript to toggle mobile menu visibility
+                            <script>
+                                // JavaScript to toggle mobile menu visibility
         document.addEventListener("DOMContentLoaded", function() {
             var mobileMenuToggle = document.getElementById("mobile-menu-toggle");
             var mobileMenu = document.getElementById("mobile-menu");
@@ -437,7 +417,7 @@
                 }
             });
         });
-                        </script>
+                            </script>
 
 
                     </div>
@@ -593,7 +573,7 @@
                             }
 
                             /* Media query for smaller devices */
-                            @media (max-width: 501px) {
+                            @media (max-width: 500px) {
                                 video {
                                     width: 300px;
 
@@ -606,7 +586,7 @@
                             @media (min-width: 500px) {
                                 video {
                                     width: 500px;
-                                    left: 120px;
+                                    left: 60px;
                                     /* Set the width to 300 pixels for devices with a width of 500 pixels or less */
 
                                     /* Reset left position for smaller devices */
@@ -619,7 +599,6 @@
                         <!-- Delayed show and slide-in animation -->
                         <div class="video-container">
                             <video id="video" src="images/des.mp4" autoplay loop width="500" title="Licensedanimation" style="display: none;"></video>
-                            <div class="contentArea"></div>
                         </div>
 
                         <script>
@@ -647,15 +626,8 @@
                         </script>
 
                     </div>
-                    <div class="contentArea">
-
-                        <div class="contentArea">
-                            <p>Supported by Microsoft</p>
-                        </div>
-                    </div><img width="84" height="30" left="2000" src="images/mic.png" </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
     <section class="section-home-services">

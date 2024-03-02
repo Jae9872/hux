@@ -219,8 +219,131 @@
                                             </div>
                                             <div class="mobile-menu-toggle-line _02" style="width: 100%;">
                                             </div>
-                                            <div class="mobile-menu-toggle-line _03" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                                            <style>
+                                                /* Mobile menu styling */
+                                                .mobile-menu {
+                                                    display: none;
+                                                    /* Initially hide the mobile menu */
+                                                    background-color: black;
+                                                    /* Set background color to black */
+                                                    color: white;
+                                                    /* Set text color to white */
+                                                    padding: 10px;
+                                                    /* Add padding for better appearance */
+                                                    position: absolute;
+                                                    /* Position the menu absolutely */
+                                                    top: 50px;
+                                                    /* Adjust the distance from the top */
+                                                    left: 0;
+                                                    /* Align the menu to the left */
+                                                    width: 100%;
+                                                    /* Make the menu full-width */
+                                                    text-align: center;
+                                                    /* Center-align the menu items */
+                                                    transition: height 0.3s ease;
+                                                    /* Add transition for smooth animation */
+                                                }
+
+                                                /* Style for the mobile menu toggle button */
+                                                .mobile-menu-toggle {
+                                                    cursor: pointer;
+                                                    /* Change cursor to pointer */
+                                                    background: none;
+                                                    /* Remove background */
+                                                    border: none;
+                                                    /* Remove border */
+                                                    outline: none;
+                                                    /* Remove outline */
+                                                    position: fixed;
+                                                    /* Position the button fixed */
+                                                    top: 20px;
+                                                    /* Adjust the distance from the top */
+                                                    right: 20px;
+                                                    /* Align the button to the right */
+                                                    z-index: 999;
+                                                    /* Set a high z-index to ensure it's above other elements */
+                                                    transition: transform 0.3s ease;
+                                                    /* Add transition for smooth animation */
+                                                }
+
+                                                /* Style for the toggle icon lines */
+                                                .toggle-line {
+                                                    width: 25px;
+                                                    height: 3px;
+                                                    background-color: white;
+                                                    margin: 5px 0;
+                                                    transition: transform 0.3s ease;
+                                                    /* Add transition for smooth animation */
+                                                }
+
+                                                /* Style for the toggle icon when active (clicked) */
+                                                .active .toggle-line:nth-child(1) {
+                                                    transform: translateY(8px) rotate(45deg);
+                                                }
+
+                                                .active .toggle-line:nth-child(2) {
+                                                    opacity: 0;
+                                                }
+
+                                                .active .toggle-line:nth-child(3) {
+                                                    transform: translateY(-8px) rotate(-45deg);
+                                                }
+                                            </style>
+
+
+                                            <!-- Mobile menu toggle button -->
+                                            <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+                                                <div class="toggle-line"></div>
+                                                <div class="toggle-line"></div>
+                                                <div class="toggle-line"></div>
+                                            </button>
+
+                                            <!-- Mobile menu content -->
+                                            <div id="mobile-menu" class="mobile-menu">
+                                                <!-- List of menu items -->
+                                                <a id="contact" class="button primary w-inline-block" href="Home.html">
+                                                    <div class="button-inner">
+                                                        <div class="button-inner-text">Home</div>
+                                                        <div class="button-inner-text-hover">Home</div>
+                                                    </div>
+                                                </a><br><a id="contact" class="button primary w-inline-block" href="careers1.html">
+                                                    <div class="button-inner">
+                                                        <div class="button-inner-text">Careers</div>
+                                                        <div class="button-inner-text-hover">Careers</div>
+                                                    </div>
+                                                </a><br><a id="contact" class="button primary w-inline-block" href="Products.html">
+                                                    <div class="button-inner">
+                                                        <div class="button-inner-text">Products</div>
+                                                        <div class="button-inner-text-hover">Products</div>
+                                                    </div>
+                                                </a><br><a id="contact" class="button primary w-inline-block" href="contact.html">
+                                                    <div class="button-inner">
+                                                        <div class="button-inner-text">Contact</div>
+                                                        <div class="button-inner-text-hover">Contact</div>
+                                                    </div>
+                                                </a><br> <a target="_blank" class="badge small link w-inline-block" href="https://www.linkedin.com/company/huxangroup">
+                                                    <div class="text-meta-small">IN</div>
+                                                </a>
+
                                             </div>
+
+                                            <script>
+                                                // JavaScript to toggle mobile menu visibility
+                                                                                                document.addEventListener("DOMContentLoaded", function() {
+                                                                                                    var mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+                                                                                                    var mobileMenu = document.getElementById("mobile-menu");
+                                                                                            
+                                                                                                    // Toggle mobile menu visibility on click
+                                                                                                    mobileMenuToggle.addEventListener("click", function() {
+                                                                                                        mobileMenu.classList.toggle("active");
+                                                                                                        if (mobileMenu.classList.contains("active")) {
+                                                                                                            mobileMenu.style.display = "block";
+                                                                                                        } else {
+                                                                                                            mobileMenu.style.display = "none";
+                                                                                                        }
+                                                                                                    });
+                                                                                                });
+                                            </script>
                                         </div>
                                     </div>
                                 </div>

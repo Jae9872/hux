@@ -221,218 +221,342 @@
                                                 <div class="text-meta-small">IN</div>
                                             </a>
                                         </div>
-                                        <div data-w-id="9f610c21-b7d9-9af4-fb08-b3c3860d4005" class="mobile-menu-toggle">
-                                            <div class="mobile-menu-toggle-line _01" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                            </div>
-                                            <div class="mobile-menu-toggle-line _02" style="width: 100%;">
-                                            </div>
-                                            <div class="mobile-menu-toggle-line _03" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                            </div>
+                                        <style>
+                                            /* Mobile menu styling */
+                                            .mobile-menu {
+                                                display: none;
+                                                /* Initially hide the mobile menu */
+                                                background-color: black;
+                                                /* Set background color to black */
+                                                color: white;
+                                                /* Set text color to white */
+                                                padding: 10px;
+                                                /* Add padding for better appearance */
+                                                position: absolute;
+                                                /* Position the menu absolutely */
+                                                top: 50px;
+                                                /* Adjust the distance from the top */
+                                                left: 0;
+                                                /* Align the menu to the left */
+                                                width: 100%;
+                                                /* Make the menu full-width */
+                                                text-align: center;
+                                                /* Center-align the menu items */
+                                                transition: height 0.3s ease;
+                                                /* Add transition for smooth animation */
+                                            }
+
+                                            /* Style for the mobile menu toggle button */
+                                            .mobile-menu-toggle {
+                                                cursor: pointer;
+                                                /* Change cursor to pointer */
+                                                background: none;
+                                                /* Remove background */
+                                                border: none;
+                                                /* Remove border */
+                                                outline: none;
+                                                /* Remove outline */
+                                                position: fixed;
+                                                /* Position the button fixed */
+                                                top: 20px;
+                                                /* Adjust the distance from the top */
+                                                right: 20px;
+                                                /* Align the button to the right */
+                                                z-index: 999;
+                                                /* Set a high z-index to ensure it's above other elements */
+                                                transition: transform 0.3s ease;
+                                                /* Add transition for smooth animation */
+                                            }
+
+                                            /* Style for the toggle icon lines */
+                                            .toggle-line {
+                                                width: 25px;
+                                                height: 3px;
+                                                background-color: white;
+                                                margin: 5px 0;
+                                                transition: transform 0.3s ease;
+                                                /* Add transition for smooth animation */
+                                            }
+
+                                            /* Style for the toggle icon when active (clicked) */
+                                            .active .toggle-line:nth-child(1) {
+                                                transform: translateY(8px) rotate(45deg);
+                                            }
+
+                                            .active .toggle-line:nth-child(2) {
+                                                opacity: 0;
+                                            }
+
+                                            .active .toggle-line:nth-child(3) {
+                                                transform: translateY(-8px) rotate(-45deg);
+                                            }
+                                        </style>
+
+
+                                        <!-- Mobile menu toggle button -->
+                                        <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+                                            <div class="toggle-line"></div>
+                                            <div class="toggle-line"></div>
+                                            <div class="toggle-line"></div>
+                                        </button>
+
+                                        <!-- Mobile menu content -->
+                                        <div id="mobile-menu" class="mobile-menu">
+                                            <!-- List of menu items -->
+                                            <a id="contact" class="button primary w-inline-block" href="Home.html">
+                                                <div class="button-inner">
+                                                    <div class="button-inner-text">Home</div>
+                                                    <div class="button-inner-text-hover">Home</div>
+                                                </div>
+                                            </a><br><a id="contact" class="button primary w-inline-block" href="careers1.html">
+                                                <div class="button-inner">
+                                                    <div class="button-inner-text">Careers</div>
+                                                    <div class="button-inner-text-hover">Careers</div>
+                                                </div>
+                                            </a><br><a id="contact" class="button primary w-inline-block" href="Products.html">
+                                                <div class="button-inner">
+                                                    <div class="button-inner-text">Products</div>
+                                                    <div class="button-inner-text-hover">Products</div>
+                                                </div>
+                                            </a><br><a id="contact" class="button primary w-inline-block" href="contact.html">
+                                                <div class="button-inner">
+                                                    <div class="button-inner-text">Contact</div>
+                                                    <div class="button-inner-text-hover">Contact</div>
+                                                </div>
+                                            </a><br> <a target="_blank" class="badge small link w-inline-block" href="https://www.linkedin.com/company/huxangroup">
+                                                <div class="text-meta-small">IN</div>
+                                            </a>
+
+                                        </div>
+
+                                        <script>
+                                            // JavaScript to toggle mobile menu visibility
+                                                                                            document.addEventListener("DOMContentLoaded", function() {
+                                                                                                var mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+                                                                                                var mobileMenu = document.getElementById("mobile-menu");
+                                                                                        
+                                                                                                // Toggle mobile menu visibility on click
+                                                                                                mobileMenuToggle.addEventListener("click", function() {
+                                                                                                    mobileMenu.classList.toggle("active");
+                                                                                                    if (mobileMenu.classList.contains("active")) {
+                                                                                                        mobileMenu.style.display = "block";
+                                                                                                    } else {
+                                                                                                        mobileMenu.style.display = "none";
+                                                                                                    }
+                                                                                                });
+                                                                                            });
+                                        </script>
+                                        <div class="mobile-menu-toggle-line _01" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                                        </div>
+                                        <div class="mobile-menu-toggle-line _02" style="width: 100%;">
+                                        </div>
+                                        <div class="mobile-menu-toggle-line _03" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
                                         </div>
                                     </div>
                                 </div>
-                            </header>
-                            <div class="line" style="width: 0%;">
+                        </div>
+        </header>
+        <div class="line" style="width: 0%;">
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="mobile-menu" style="display: none; opacity: 0; transform: translate3d(0px, 10px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+        <div class="page-padding">
+        </div>
+    </div>
+    </header>
+    <main class="main-wrapper">
+        <section class="section-home-hero1">
+            <div class="page-padding">
+                <style>
+                    .section-home-hero1 {
+                        background-image: url('images/0120.png');
+                        /* Corrected background-image property */
+                        background-size: cover;
+                        background-position: center;
+                        width: auto;
+                        height: auto;
+                        /* Sets the height to 100% of the viewport height, making it full-screen */
+                    }
+                </style>
+                <main class="main-wrapper">
+                    <section class="section-studio-hero">
+                        <div class="page-padding">
+                            <div class="container-xxlarge">
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="mobile-menu" style="display: none; opacity: 0; transform: translate3d(0px, 10px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                <div class="page-padding">
-                </div>
-            </div>
-        </header>
-        <main class="main-wrapper">
-            <section class="section-home-hero1">
-                <div class="page-padding">
-                    <style>
-                        .section-home-hero1 {
-                            background-image: url('images/0120.png');
-                            /* Corrected background-image property */
-                            background-size: cover;
-                            background-position: center;
-                            width: auto;
-                            height: auto;
-                            /* Sets the height to 100% of the viewport height, making it full-screen */
-                        }
-                    </style>
-                    <main class="main-wrapper">
-                        <section class="section-studio-hero">
-                            <div class="page-padding">
-                                <div class="container-xxlarge">
-                                </div>
-                            </div>
-                        </section>
-                        <section class="section-studio-team">
-                            <main class="main-wrapper">
-                                <section class="uui-section_career05">
-                                    <div class="uui-page-padding-3">
-                                        <div class="uui-container-large-3">
-                                            <div class="uui-padding-vertical-xhuge-4">
+                    </section>
+                    <section class="section-studio-team">
+                        <main class="main-wrapper">
+                            <section class="uui-section_career05">
+                                <div class="uui-page-padding-3">
+                                    <div class="uui-container-large-3">
+                                        <div class="uui-padding-vertical-xhuge-4">
+                                            <section>
                                                 <section>
-                                                    <section>
-                                                        <div class="uui-page-padding-4">
-                                                            <div class="uui-container-large-3">
-                                                                <div class="uui-padding-vertical-xhuge-4">
-                                                                    <div class="uui-career11_component">
-                                                                        <div class="w-layout-grid uui-career11_department-wrapper">
-                                                                            <div>
-                                                                                <div><a href="careers1.html" class="button w-button">Go back</a></div>
-                                                                            </div>
-                                                                            <div class="uui-career11_list-wrapper">
-                                                                                <style>
-                                                                                    body {
-                                                                                        font-family: Arial, sans-serif;
-                                                                                        line-height: 1.6;
-                                                                                        margin: 0;
-                                                                                        padding: 0;
-                                                                                        background-color: #f5f5f5;
-                                                                                        color: #333;
-                                                                                    }
+                                                    <div class="uui-page-padding-4">
+                                                        <div class="uui-container-large-3">
+                                                            <div class="uui-padding-vertical-xhuge-4">
+                                                                <div class="uui-career11_component">
+                                                                    <div class="w-layout-grid uui-career11_department-wrapper">
+                                                                        <div>
+                                                                            <div><a href="careers1.html" class="button w-button">Go back</a></div>
+                                                                        </div>
+                                                                        <div class="uui-career11_list-wrapper">
+                                                                            <style>
+                                                                                body {
+                                                                                    font-family: Arial, sans-serif;
+                                                                                    line-height: 1.6;
+                                                                                    margin: 0;
+                                                                                    padding: 0;
+                                                                                    background-color: #f5f5f5;
+                                                                                    color: #333;
+                                                                                }
 
-                                                                                    .container {
-                                                                                        max-width: 800px;
-                                                                                        margin: 0 auto;
-                                                                                        padding: 20px;
-                                                                                    }
+                                                                                .container {
+                                                                                    max-width: 800px;
+                                                                                    margin: 0 auto;
+                                                                                    padding: 20px;
+                                                                                }
 
-                                                                                    h1,
-                                                                                    h2,
-                                                                                    h3 {
-                                                                                        color: #007bff;
-                                                                                    }
+                                                                                h1,
+                                                                                h2,
+                                                                                h3 {
+                                                                                    color: #007bff;
+                                                                                }
 
-                                                                                    h2 {
-                                                                                        margin-top: 30px;
-                                                                                    }
+                                                                                h2 {
+                                                                                    margin-top: 30px;
+                                                                                }
 
-                                                                                    h3 {
-                                                                                        margin-top: 20px;
-                                                                                    }
+                                                                                h3 {
+                                                                                    margin-top: 20px;
+                                                                                }
 
-                                                                                    p {
-                                                                                        margin-bottom: 15px;
-                                                                                    }
+                                                                                p {
+                                                                                    margin-bottom: 15px;
+                                                                                }
 
-                                                                                    ul {
-                                                                                        margin-bottom: 15px;
-                                                                                    }
+                                                                                ul {
+                                                                                    margin-bottom: 15px;
+                                                                                }
 
-                                                                                    ul li {
-                                                                                        list-style-type: disc;
-                                                                                        margin-left: 20px;
-                                                                                    }
+                                                                                ul li {
+                                                                                    list-style-type: disc;
+                                                                                    margin-left: 20px;
+                                                                                }
 
-                                                                                    .contact-info {
-                                                                                        margin-top: 30px;
-                                                                                    }
+                                                                                .contact-info {
+                                                                                    margin-top: 30px;
+                                                                                }
 
-                                                                                    .contact-info p {
-                                                                                        margin-bottom: 5px;
-                                                                                    }
+                                                                                .contact-info p {
+                                                                                    margin-bottom: 5px;
+                                                                                }
 
-                                                                                    .apply-btn {
-                                                                                        display: inline-block;
-                                                                                        padding: 10px 20px;
-                                                                                        background-color: #007bff;
-                                                                                        color: #fff;
-                                                                                        text-decoration: none;
-                                                                                        border-radius: 5px;
-                                                                                        transition: background-color 0.3s;
-                                                                                    }
+                                                                                .apply-btn {
+                                                                                    display: inline-block;
+                                                                                    padding: 10px 20px;
+                                                                                    background-color: #007bff;
+                                                                                    color: #fff;
+                                                                                    text-decoration: none;
+                                                                                    border-radius: 5px;
+                                                                                    transition: background-color 0.3s;
+                                                                                }
 
-                                                                                    .apply-btn:hover {
-                                                                                        background-color: #0056b3;
-                                                                                    }
-                                                                                </style>
-                                                                                </head>
+                                                                                .apply-btn:hover {
+                                                                                    background-color: #0056b3;
+                                                                                }
+                                                                            </style>
+                                                                            </head>
 
-                                                                                <body>
-                                                                                    <div class="container">
-                                                                                        <h1>Job Title: Project Manager/Developer/Creative</h1>
-                                                                                        <p><strong>Company:</strong> Huxan Group</p>
-                                                                                        <p><strong>Location:</strong> Fully Remote</p>
-                                                                                        <p><strong>Type:</strong> Full-time/Part-time/Contract</p>
+                                                                            <body>
+                                                                                <div class="container">
+                                                                                    <h1>Job Title: Project Manager/Developer/Creative</h1>
+                                                                                    <p><strong>Company:</strong> Huxan Group</p>
+                                                                                    <p><strong>Location:</strong> Fully Remote</p>
+                                                                                    <p><strong>Type:</strong> Full-time/Part-time/Contract</p>
 
-                                                                                        <h2>About Us:</h2>
-                                                                                        <p>Huxan Group is a leading organization dedicated to fostering innovation and driving growth in various industries. Our commitment to excellence and creativity sets us apart as we strive to make a meaningful impact in the world. Join us in our mission to push boundaries and create a brighter future.</p>
+                                                                                    <h2>About Us:</h2>
+                                                                                    <p>Huxan Group is a leading organization dedicated to fostering innovation and driving growth in various industries. Our commitment to excellence and creativity sets us apart as we strive to make a meaningful impact in the world. Join us in our mission to push boundaries and create a brighter future.</p>
 
-                                                                                        <h2>Position Overview:</h2>
-                                                                                        <p>We are seeking versatile and motivated individuals to join our team in the roles of Project Manager, Developer, and Creative. These positions require a diverse set of skills, including project management, technical expertise, and creative thinking. The ideal candidates will thrive in a dynamic environment, possess excellent communication skills, and be passionate about delivering exceptional results.</p>
+                                                                                    <h2>Position Overview:</h2>
+                                                                                    <p>We are seeking versatile and motivated individuals to join our team in the roles of Project Manager, Developer, and Creative. These positions require a diverse set of skills, including project management, technical expertise, and creative thinking. The ideal candidates will thrive in a dynamic environment, possess excellent communication skills, and be passionate about delivering exceptional results.</p>
 
-                                                                                        <h2>Key Responsibilities:</h2>
-                                                                                        <h3>Project Management:</h3>
-                                                                                        <ul>
-                                                                                            <li>Lead project planning, execution, and delivery, ensuring alignment with organizational goals and objectives.</li>
-                                                                                            <li>Coordinate with cross-functional teams to define project requirements, timelines, and deliverables.</li>
-                                                                                            <li>Monitor project progress, identify risks, and implement mitigation strategies to ensure successful outcomes.</li>
-                                                                                        </ul>
+                                                                                    <h2>Key Responsibilities:</h2>
+                                                                                    <h3>Project Management:</h3>
+                                                                                    <ul>
+                                                                                        <li>Lead project planning, execution, and delivery, ensuring alignment with organizational goals and objectives.</li>
+                                                                                        <li>Coordinate with cross-functional teams to define project requirements, timelines, and deliverables.</li>
+                                                                                        <li>Monitor project progress, identify risks, and implement mitigation strategies to ensure successful outcomes.</li>
+                                                                                    </ul>
 
-                                                                                        <h3>Development:</h3>
-                                                                                        <ul>
-                                                                                            <li>Develop and maintain software applications, websites, or other digital products according to project specifications.</li>
-                                                                                            <li>Collaborate with designers and other developers to implement technical solutions and optimize user experience.</li>
-                                                                                            <li>Conduct testing, debugging, and troubleshooting to ensure product quality and performance.</li>
-                                                                                        </ul>
+                                                                                    <h3>Development:</h3>
+                                                                                    <ul>
+                                                                                        <li>Develop and maintain software applications, websites, or other digital products according to project specifications.</li>
+                                                                                        <li>Collaborate with designers and other developers to implement technical solutions and optimize user experience.</li>
+                                                                                        <li>Conduct testing, debugging, and troubleshooting to ensure product quality and performance.</li>
+                                                                                    </ul>
 
-                                                                                        <h3>Creative:</h3>
-                                                                                        <ul>
-                                                                                            <li>Conceptualize and create compelling visual designs, including graphics, illustrations, and multimedia content.</li>
-                                                                                            <li>Collaborate with stakeholders to understand project objectives and translate ideas into creative solutions.</li>
-                                                                                            <li>Stay abreast of industry trends and best practices to drive innovation and creativity in all projects.</li>
-                                                                                        </ul>
+                                                                                    <h3>Creative:</h3>
+                                                                                    <ul>
+                                                                                        <li>Conceptualize and create compelling visual designs, including graphics, illustrations, and multimedia content.</li>
+                                                                                        <li>Collaborate with stakeholders to understand project objectives and translate ideas into creative solutions.</li>
+                                                                                        <li>Stay abreast of industry trends and best practices to drive innovation and creativity in all projects.</li>
+                                                                                    </ul>
 
-                                                                                        <h2>Qualifications:</h2>
-                                                                                        <ul>
-                                                                                            <li>Bachelor's degree in a relevant field such as Computer Science, Engineering, Design, or equivalent practical experience.</li>
-                                                                                            <li>Proven experience in project management, software development, and/or creative design, depending on the role.</li>
-                                                                                            <li>Strong problem-solving skills and ability to think critically and analytically.</li>
-                                                                                            <li>Proficiency in relevant programming languages, software tools, and design software.</li>
-                                                                                            <li>Excellent communication skills and ability to collaborate effectively with team members and stakeholders.</li>
-                                                                                            <li>Attention to detail and ability to manage multiple projects simultaneously.</li>
-                                                                                        </ul>
+                                                                                    <h2>Qualifications:</h2>
+                                                                                    <ul>
+                                                                                        <li>Bachelor's degree in a relevant field such as Computer Science, Engineering, Design, or equivalent practical experience.</li>
+                                                                                        <li>Proven experience in project management, software development, and/or creative design, depending on the role.</li>
+                                                                                        <li>Strong problem-solving skills and ability to think critically and analytically.</li>
+                                                                                        <li>Proficiency in relevant programming languages, software tools, and design software.</li>
+                                                                                        <li>Excellent communication skills and ability to collaborate effectively with team members and stakeholders.</li>
+                                                                                        <li>Attention to detail and ability to manage multiple projects simultaneously.</li>
+                                                                                    </ul>
 
-                                                                                        <h2>Benefits:</h2>
-                                                                                        <ul>
-                                                                                            <li>Competitive salary/compensation package.</li>
-                                                                                            <li>Opportunities for career growth and advancement within a dynamic and innovative organization.</li>
-                                                                                            <li>Flexible work arrangements and fully remote work environment.</li>
-                                                                                            <li>Access to training and professional development resources.</li>
-                                                                                            <li>Additional benefits may vary depending on the role and employment status.</li>
-                                                                                        </ul>
+                                                                                    <h2>Benefits:</h2>
+                                                                                    <ul>
+                                                                                        <li>Competitive salary/compensation package.</li>
+                                                                                        <li>Opportunities for career growth and advancement within a dynamic and innovative organization.</li>
+                                                                                        <li>Flexible work arrangements and fully remote work environment.</li>
+                                                                                        <li>Access to training and professional development resources.</li>
+                                                                                        <li>Additional benefits may vary depending on the role and employment status.</li>
+                                                                                    </ul>
 
-                                                                                        <h2>How to Apply:</h2>
-                                                                                        <p>Interested candidates should submit their resume and a cover letter outlining their qualifications and why they are a good fit for the position to <a href="mailto:HR@Huxangroup.com">HR@Huxangroup.com</a>. Please include the title of the desired role ("Project Manager," "Developer," or "Creative") in the subject line of the email.</p>
+                                                                                    <h2>How to Apply:</h2>
+                                                                                    <p>Interested candidates should submit their resume and a cover letter outlining their qualifications and why they are a good fit for the position to <a href="mailto:HR@Huxangroup.com">HR@Huxangroup.com</a>. Please include the title of the desired role ("Project Manager," "Developer," or "Creative") in the subject line of the email.</p>
 
-                                                                                        <p><strong>Huxan Group is an equal opportunity employer and welcomes candidates from diverse backgrounds to apply. We thank all applicants for their interest; however, only those selected for an interview will be contacted.</strong></p>
+                                                                                    <p><strong>Huxan Group is an equal opportunity employer and welcomes candidates from diverse backgrounds to apply. We thank all applicants for their interest; however, only those selected for an interview will be contacted.</strong></p>
 
-                                                                                        <div class="contact-info">
-                                                                                            <p>For inquiries, please contact:</p>
-                                                                                            <p>Email: <a href="mailto:HR@Huxangroup.com">HR@Huxangroup.com</a></p>
-                                                                                        </div>
+                                                                                    <div class="contact-info">
+                                                                                        <p>For inquiries, please contact:</p>
+                                                                                        <p>Email: <a href="mailto:HR@Huxangroup.com">HR@Huxangroup.com</a></p>
                                                                                     </div>
-                                                                                </body>
-                                                                            </div>
+                                                                                </div>
+                                                                            </body>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                            </div>
-                                </section>
-                        </section>
-                </div>
-    </div>
-    </div>
-    </section>
-    <section class="section-newsletter">
-        <div class="page-padding">
-            <div class="container-xxlarge">
-                <div class="line" style="width: 0%;"></div>
+                                                    </div>
+                                        </div>
+                            </section>
+                    </section>
             </div>
-        </div>
-    </section>
+            </div>
+            </div>
+        </section>
+        <section class="section-newsletter">
+            <div class="page-padding">
+                <div class="container-xxlarge">
+                    <div class="line" style="width: 0%;"></div>
+                </div>
+            </div>
+        </section>
     </main>
     </section>
     <section class="section-cta-contact">
