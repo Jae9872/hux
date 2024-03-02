@@ -573,78 +573,75 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            /* Keyframes for slide-in animation */
-                            @keyframes slideInFromLeft {
-                                0% {
-                                    transform: translateX(-100%);
-                                }
+                      <style>
+    /* Keyframes for slide-in animation */
+    @keyframes slideInFromLeft {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
 
-                                100% {
-                                    transform: translateX(0);
-                                }
-                            }
+    /* Apply slide-in animation to the element */
+    .lottie-animation-2 {
+        transform: translateY(-50%);
+        display: none;
+        /* Initially hide the element */
+    }
 
-                            /* Apply slide-in animation to the element */
-                            .lottie-animation-2 {
-                                transform: translateY(-50%);
-                                display: none;
-                                /* Initially hide the element */
-                            }
+    /* Media query for smaller devices */
+    @media (max-width: 501px) {
+        video {
+            width: 300px;
+            /* Set the width to 300 pixels for devices with a width of 500 pixels or less */
+            right: 60px;
+            /* Reset left position for smaller devices */
+        }
+    }
 
-                            /* Media query for smaller devices */
-                            @media (max-width: 501px) {
-                                video {
-                                    width: 300px;
+    @media (min-width: 500px) {
+        video {
+            width: 500px;
+            left: 120px;
+            /* Set the width to 300 pixels for devices with a width of 500 pixels or less */
+            /* Reset left position for smaller devices */
+        }
+    }
 
-                                    /* Set the width to 300 pixels for devices with a width of 500 pixels or less */
-                                    right: 60;
-                                    /* Reset left position for smaller devices */
-                                }
-                            }
+    /* Style to move the video a little to the right */
+</style>
 
-                            @media (min-width: 500px) {
-                                video {
-                                    width: 500px;
-                                    left: 120px;
-                                    /* Set the width to 300 pixels for devices with a width of 500 pixels or less */
+<!-- Delayed show and slide-in animation -->
+<div class="video-container">
+    <video id="video" src="images/des.mp4" autoplay loop width="500" title="Licensedanimation" style="display: none;"></video>
+    <div class="contentArea"></div>
+</div>
 
-                                    /* Reset left position for smaller devices */
-                                }
-                            }
+<script>
+    // Show the element after 8 seconds with morph transition
+    setTimeout(function() {
+        var video = document.getElementById('video');
+        video.style.display = 'block'; // Show the video
 
-                            /* Style to move the video a little to the right */
-                        </style>
+        video.style.opacity = '0'; // Set initial opacity to 0
+        video.style.transition = 'opacity 1s ease-in-out'; // Apply transition
 
-                        <!-- Delayed show and slide-in animation -->
-                        <div class="video-container">
-                            <video id="video" src="images/des.mp4" autoplay loop width="500" title="Licensedanimation" style="display: none;"></video>
-                            <div class="contentArea"></div>
-                        </div>
+        // Change opacity to 1 after a brief delay
+        setTimeout(function() {
+            video.style.opacity = '1';
+        }, 100);
 
-                        <script>
-                            // Show the element after 8 seconds with morph transition
-                            setTimeout(function() {
-                                var video = document.getElementById('video');
-                                video.style.display = 'block'; // Show the video
-                                
-                                video.style.opacity = '0'; // Set initial opacity to 0
-                                video.style.transition = 'opacity 1s ease-in-out'; // Apply transition
-                                
-                                // Change opacity to 1 after a brief delay
-                                setTimeout(function() {
-                                    video.style.opacity = '1';
-                                }, 100);
-                                
-                                // Show the lottie animation after transition
-                                setTimeout(function() {
-                                    var element = document.querySelector('.lottie-animation-2');
-                                    element.style.display = 'block';
-                                    element.style.animation = 'slideInFromLeft 1s ease-in-out forwards'; // Apply slide-in animation
-                                }, 1000); // Wait for 1 second after the video morphs
-                                
-                            }, 8000); // 8000 milliseconds = 8 seconds
-                        </script>
+        // Show the lottie animation after transition
+        setTimeout(function() {
+            var element = document.querySelector('.lottie-animation-2');
+            element.style.display = 'block';
+            element.style.animation = 'slideInFromLeft 1s ease-in-out forwards'; // Apply slide-in animation
+        }, 1000); // Wait for 1 second after the video morphs
+
+    }, 8000); // 8000 milliseconds = 8 seconds
+</script>
 
                     </div>
                     <div class="contentArea">
