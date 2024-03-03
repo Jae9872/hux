@@ -736,14 +736,22 @@
                         .contentArea8 {
                             text-align: right;
 
-                        }
+                        }    @media (max-width: 500px) {
+        .br-mobile {
+            display: block; /* Show the line break on mobile devices */
+        }
+    }
+    @media (min-width: 501px) {
+        .br-mobile {
+            display: none; /* Hide the line break on larger devices */
+        }
                     </style>
                     <div class="contentArea8">
 
-                        <div class="contentArea">
+                        <div class="contentArea"> <br class="br-mobile">
                             <p>Supported by Microsoft</p>
 
-                        </div><img width="84" height="30" left="2000" src="images/mic.png" </div>
+                        </div><img width="84" height="30" left="2000" src="images/mic.png" ></div> <br class="br-mobile">
                     </div>
                 </div>
             </div>
