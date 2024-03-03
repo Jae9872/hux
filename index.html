@@ -307,13 +307,45 @@
 <header>
     <div class="page-padding">
         <div class="container-xxlarge-copy">
-            <header class="navbar-inner-copy">
+            <div class="contentArea"></div>
+<header class="navbar-inner-copy">
                 <div id="w-node-cf665aa7-612c-9713-0917-12f535c66615-35c6660f" class="navbar-left">
-                    <div class="navbar-logo">
-                        <a aria-current="page" class="w-inline-block w--current" style="position: fixed; z-index: 9999;">
+                    <div class="navbar-logo"><style>
+                        /* Additional style for the logo */
+                        .navbar-logo {
+                            margin: auto;
+                            left: 0;
+                            right: 0;
+                            text-align: center;
+                            position: relative;
+                            z-index: 9999;
+                            /* Ensure it's on top of other elements */
+                        }
+                            /* Media query to hide logo on mobile devices */
+                            @media (max-width: 500px) {
+                                .contentArea5 {
+                                    display: none;
+                                }
+                            }
+                        
+                    </style>
+                        <div class="contentArea5"><a aria-current="page" class="w-inline-block w--current" style="position: fixed; z-index: 9999; margin: auto; left: 0; right: 0; text-align: left;">
                             <img height="Auto" width="200" src="images/TitleLogo1.png">
-                        </a>
+                        </a></div>
+<style>
+    /* Media query to hide logo on mobile devices */
+    @media (min-width: 500px) {
+        .contentArea6 {
+            display: none;
+        }
+    }
+</style>
+<div class="contentArea6"><a aria-current="page" class="w-inline-block w--current">
+    <img height="Auto" width="200" src="images/TitleLogo1.png">
+</a></div>
+
                         <style>
+                        
                             /* Mobile menu styling */
                             .mobile-menu {
                                 display: none;
