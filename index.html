@@ -310,7 +310,7 @@
             <header class="navbar-inner-copy">
                 <div id="w-node-cf665aa7-612c-9713-0917-12f535c66615-35c6660f" class="navbar-left">
                     <div class="navbar-logo">
-                        <a aria-current="page" class="w-inline-block w--current">
+                        <a aria-current="page" class="w-inline-block w--current" style="position: fixed; z-index: 9999;">
                             <img height="Auto" width="200" src="images/TitleLogo1.png">
                         </a>
                         <style>
@@ -564,93 +564,83 @@
                                 <div class="margin-bottom margin-">
                                     <div class="heading-small">Turning concepts to abundant revenue</div>
                                     <div class="contentArea"><br><br></div>
-                                </div>  <style>
-                            /* Keyframes for slide-in animation */
-                            @keyframes slideInFromLeft {
-                                0% {
-                                    transform: translateX(-100%);
-                                }
-
-                                100% {
-                                    transform: translateX(0);
-                                }
-                            }
-
-                            /* Apply slide-in animation to the element */
-                            .lottie-animation-2 {
-                                transform: translateY(-50%);
-                                display: none;
-                                /* Initially hide the element */
-                            }
-
-                            /* Media query for smaller devices */
-                            @media (max-width: 501px) {
-                                video {
-                                    width: 300px;
-
-                                    /* Set the width to 300 pixels for devices with a width of 500 pixels or less */
-                                    right: 60;
-                                    /* Reset left position for smaller devices */
-                                }
-                            }
-@media only screen and (min-width: 501px) {
-    video {
-        display: none;
-    }
-}
-
-                            @media (min-width: 500px) {
-                                video {
-                                    width: 500px;
-                                    left: 120px;
-                                    /* Set the width to 300 pixels for devices with a width of 500 pixels or less */
-
-                                    /* Reset left position for smaller devices */
-                                }
-                            }
-
-                            /* Style to move the video a little to the right */
-                        </style>
-
-                        <!-- Delayed show and slide-in animation -->
-                        <div class="video-container">
-                            <video id="video" src="images/des.mp4" loop width="500" title="Licensedanimation" style="display: none;" muted="true" autoplay="true" playsinline=""></video>
-                            <div class="contentArea"></div>
-                        </div>
-
-                        <script>
-                            // Show the element after 8 seconds with morph transition
-                            setTimeout(function() {
-                                var video = document.getElementById('video');
-                                video.style.display = 'block'; // Show the video
-                                
-                                video.style.opacity = '0'; // Set initial opacity to 0
-                                video.style.transition = 'opacity 1s ease-in-out'; // Apply transition
-                                
-                                // Change opacity to 1 after a brief delay
-                                setTimeout(function() {
-                                    video.style.opacity = '1';
-                                }, 100);
-                                
-                                // Show the lottie animation after transition
-                                setTimeout(function() {
-                                    var element = document.querySelector('.lottie-animation-2');
-                                    element.style.display = 'block';
-                                    element.style.animation = 'slideInFromLeft 1s ease-in-out forwards'; // Apply slide-in animation
-                                }, 1000); // Wait for 1 second after the video morphs
-                                
-                            }, 8000); // 8000 milliseconds = 8 seconds
-                        </script>
-
+                                </div>
                                 <div class="max-width-medium">
                                     <div class="contentArea">
                                         <p></p>
                                     </div>
+
+                                    <style>
+                                        /* Media query to hide video container on web devices */
+                                        @media (min-width: 501px) {
+                                            .mobile-content {
+                                                display: none;
+                                            }
+                                        }
+
+                                        /* Keyframes for slide-in animation */
+                                        @keyframes slideInFromLeftMobile {
+                                            0% {
+                                                transform: translateX(-100%);
+                                            }
+
+                                            100% {
+                                                transform: translateX(0);
+                                            }
+                                        }
+
+                                        /* Apply slide-in animation to the element */
+                                        .lottie-animation-mobile {
+                                            transform: translateY(-50%);
+                                            display: none;
+                                            /* Initially hide the element */
+                                        }
+
+                                        /* Style to move the video a little to the right */
+                                    </style>
+
+                                    <!-- Delayed show and slide-in animation for mobile content -->
+                                    <div class="mobile-content">
+                                        <video id="video-mobile" src="images/des.mp4" loop width="300" title="Licensedanimation" style="display: none;" muted="true" autoplay="true" playsinline=""></video>
+                                        <div class="contentArea-mobile"></div>
+                                    </div>
+
+                                    <script>
+                                        // Show the element after 8 seconds with morph transition
+    setTimeout(function() {
+        var videoMobile = document.getElementById('video-mobile');
+        videoMobile.style.display = 'block'; // Show the video
+        
+        videoMobile.style.opacity = '0'; // Set initial opacity to 0
+        videoMobile.style.transition = 'opacity 1s ease-in-out'; // Apply transition
+        
+        // Change opacity to 1 after a brief delay
+        setTimeout(function() {
+            videoMobile.style.opacity = '1';
+        }, 100);
+        
+        // Show the lottie animation after transition
+        setTimeout(function() {
+            var elementMobile = document.querySelector('.lottie-animation-mobile');
+            elementMobile.style.display = 'block';
+            elementMobile.style.animation = 'slideInFromLeftMobile 1s ease-in-out forwards'; // Apply slide-in animation
+        }, 1000); // Wait for 1 second after the video morphs
+        
+    }, 1000); // 1000 milliseconds = 1 second
+                                    </script>
+
                                     <div class="text-size-xlarge">Huxan Group offer products tailored to luxury businesses, to accelerate business growth, maximize value creation and to efficiently manage wealth for our partners.</div>
                                 </div>
                             </div>
                         </div>
                         <style>
+                            /* Media query to hide video container on mobile devices */
+                            @media (max-width: 500px) {
+                                .video-container {
+                                    display: none;
+                                }
+                            }
+
                             /* Keyframes for slide-in animation */
                             @keyframes slideInFromLeft {
                                 0% {
@@ -661,38 +651,12 @@
                                     transform: translateX(0);
                                 }
                             }
-@media only screen and (max-width: 500px) {
-    video {
-        display: none;
-    }
-}
 
                             /* Apply slide-in animation to the element */
                             .lottie-animation-2 {
                                 transform: translateY(-50%);
                                 display: none;
                                 /* Initially hide the element */
-                            }
-
-                            /* Media query for smaller devices */
-                            @media (max-width: 501px) {
-                                video {
-                                    width: 300px;
-
-                                    /* Set the width to 300 pixels for devices with a width of 500 pixels or less */
-                                    right: 60;
-                                    /* Reset left position for smaller devices */
-                                }
-                            }
-
-                            @media (min-width: 500px) {
-                                video {
-                                    width: 500px;
-                                    left: 120px;
-                                    /* Set the width to 300 pixels for devices with a width of 500 pixels or less */
-
-                                    /* Reset left position for smaller devices */
-                                }
                             }
 
                             /* Style to move the video a little to the right */
@@ -920,6 +884,22 @@
                             </a>
                         </div>
                     </div>
+                </div>
+                <div class="contentArea">
+                    <style>
+                        .horizontal-line {
+                            background-color: darkgrey;
+                            height: 2px;
+                            /* Adjust the height of the line */
+                            width: 100%;
+                            /* Make the line full-width */
+                            margin: 20px 0;
+                            /* Adjust margin as needed */
+                        }
+                    </style>
+                    <div class="horizontal-line"></div><br>
+
+                    <div class="text-size-xlarge">Currently Restricted Access to only registered Users.</div><br>
                 </div>
             </div>
             <style>
