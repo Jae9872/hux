@@ -274,7 +274,7 @@
                         <body>
 
                             <!-- Fullscreen Video Element -->
-                            <video id="fullscreen-video" autoplay muted>
+                            <video id="fullscreen-video" autoplay muted playsinline="">
                                 <source src="vid/vid.mp4" type="video/mp4">
                                 <!-- Add additional source tags for other video formats if needed -->
                                 Your browser does not support the video tag.
@@ -320,9 +320,9 @@
                                 /* Move 20 pixels to the right */
                                 right: 0;
                                 text-align: center;
-                                position: fixed;
+                                position: relative;
                                 /* Ensure fixed position */
-                                
+
                                 /* Ensure it's on top of other elements */
                             }
 
@@ -334,8 +334,8 @@
                             }
                         </style>
                         <div class="contentArea5">
-                            <a aria-current="page" class="w-inline-block w--current navbar-logo" style="z-index: 9999; text-align: left;">
-                                <img height="Auto" width="200"  src="images/TitleLogo1.png">
+                            <a aria-current="page" class="w-inline-block w--current navbar-logo" text-align: left;">
+                                <img height="Auto" width="250" src="images/TitleLogo1.png">
                             </a>
                         </div>
 
@@ -639,18 +639,19 @@
                                     </style>
 
                                     <!-- Delayed show and slide-in animation for mobile content -->
-                                    
+
 
                                     <div class="text-size-xlarge">Huxan Group offer products tailored to luxury businesses, to accelerate business growth, maximize value creation and to efficiently manage wealth for our partners.</div>
                                 </div>
                             </div>
-                        </div><div class="mobile-content">
-                                        <video id="video-mobile" src="images/des.mp4" loop width="300" title="Licensedanimation" style="display: none;" muted="true" autoplay="true" playsinline=""></video>
-                                        <div class="contentArea-mobile"></div>
-                                    </div>
+                        </div>
+                        <div class="mobile-content">
+                            <video id="video-mobile" src="images/des.mp4" loop width="300" title="Licensedanimation" style="display: none;" muted="true" autoplay="true" playsinline=""></video>
+                            <div class="contentArea-mobile"></div>
+                        </div>
 
-                                    <script>
-                                        // Show the element after 8 seconds with morph transition
+                        <script>
+                            // Show the element after 8 seconds with morph transition
     setTimeout(function() {
         var videoMobile = document.getElementById('video-mobile');
         videoMobile.style.display = 'block'; // Show the video
@@ -671,7 +672,7 @@
         }, 1000); // Wait for 1 second after the video morphs
         
     }, 1000); // 1000 milliseconds = 1 second
-                                    </script>
+                        </script>
                         <style>
                             /* Media query to hide video container on mobile devices */
                             @media (max-width: 500px) {
@@ -736,25 +737,31 @@
                         .contentArea8 {
                             text-align: right;
 
-                        }    @media (max-width: 500px) {
-        .br-mobile {
-            display: block; /* Show the line break on mobile devices */
-        }
-    }
-    @media (min-width: 501px) {
-        .br-mobile {
-            display: none; /* Hide the line break on larger devices */
-        }
+                        }
+
+                        @media (max-width: 500px) {
+                            .br-mobile {
+                                display: block;
+                                /* Show the line break on mobile devices */
+                            }
+                        }
+
+                        @media (min-width: 501px) {
+                            .br-mobile {
+                                display: none;
+                                /* Hide the line break on larger devices */
+                            }
                     </style>
                     <div class="contentArea8">
 
                         <div class="contentArea"> <br class="br-mobile">
                             <p>Supported by Microsoft</p>
 
-                        </div><img width="84" height="30" left="2000" src="images/mic.png" ></div> <br class="br-mobile">
-                    </div>
+                        </div><img width="84" height="30" left="2000" src="images/mic.png">
+                    </div> <br class="br-mobile">
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <section class="section-home-services">
